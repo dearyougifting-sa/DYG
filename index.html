@@ -17,7 +17,10 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;max-width:560px;margin:0 auto;padding-bottom:90px}
 header{background:var(--y);color:#111;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;position:sticky;top:0;z-index:5}
+header{flex-wrap:wrap;row-gap:6px}
 header b{font-weight:800;letter-spacing:-.02em}
+.hbtns{display:flex;flex:1 1 auto;justify-content:flex-end;align-items:center;flex-wrap:nowrap;white-space:nowrap;overflow-x:auto}
+.hbtns button{flex:none;font-size:14px!important;margin-left:4px!important}
 header button{background:none;border:0;color:#111;font-size:15px;font-weight:700;margin-left:8px;cursor:pointer;padding:6px 4px}
 .lang{background:#111!important;color:var(--y)!important;border-radius:12px;padding:4px 10px!important}
 input,textarea,select{width:100%;padding:12px;margin-top:10px;border:1px solid var(--bd);border-radius:10px;background:var(--c);color:var(--tx);font:inherit}
@@ -63,7 +66,7 @@ input:focus,textarea:focus,select:focus{outline:2px solid var(--m);outline-offse
 </style>
 </head>
 <body>
-<header><div style="display:flex;align-items:center;gap:8px"><img src="icon-192.png" style="height:38px;border-radius:8px;background:#fff" alt=""><b style="font-size:15px;line-height:1.15">Dear You<br>Gifting SA</b></div><div><button class="lang" id="lb"></button><button id="sb"></button><button id="ab"></button><button id="cb"></button></div></header>
+<header><div style="display:flex;align-items:center;gap:8px"><img src="icon-192.png" style="height:38px;border-radius:8px;background:#fff" alt=""><b style="font-size:15px;line-height:1.15">Dear You<br>Gifting SA</b></div><div class="hbtns"><button class="lang" id="lb"></button><button id="ab"></button><button id="cb"></button><button id="sb"></button></div></header>
 <main id="app"></main>
 <a class="wa" id="wa" target="_blank" rel="noopener">💬 WhatsApp</a>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
